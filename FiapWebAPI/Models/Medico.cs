@@ -6,7 +6,8 @@ namespace FiapWebAPI.Models
     public class Medico
     {  
         [Key]
-        [Column("CRM_MED")]        
+        [Column("CRM_MED")]
+        [Required(ErrorMessage = "/n *Obrigatório*")]
         public int Crm { get; set; }
 
         [Column("NM_MED")]

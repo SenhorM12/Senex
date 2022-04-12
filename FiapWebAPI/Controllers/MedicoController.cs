@@ -4,10 +4,10 @@ using FiapWebAPI.Repository;
 
 namespace FiapWebAPI.Controllers
 {
-    public class MedController : Controller
+    public class MedicoController : Controller
     {
         private readonly MedicoRepository medicoRepository;
-        public MedController()
+        public MedicoController()
         {
             medicoRepository = new MedicoRepository();
         }

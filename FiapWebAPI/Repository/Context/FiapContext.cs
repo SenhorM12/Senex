@@ -7,6 +7,7 @@ namespace FiapWebAPI.Repository.Context
     {
         public FiapContext() : base("name-OracleConnectionString")
         {
+            System.Data.Entity.Database.SetInitializer(new MigrateDatabaseToLatestVersion<FiapContext, Senex.Migrations.Configuration>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
