@@ -1,0 +1,46 @@
+﻿@model IEnumerable<FiapWebAPI.Models.Posologia>
+
+@{
+    ViewData["Title"] = "Posologia de Medicamentos";
+}
+
+<h1>Posologia de Medicamentos</h1>
+
+<p>
+    <a asp-action="Create">Adicionar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Hora)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Quantidade)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tipo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Hora)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Quantidade)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tipo)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Hora }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.Hora })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

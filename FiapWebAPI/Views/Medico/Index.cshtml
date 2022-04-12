@@ -1,0 +1,39 @@
+﻿@model IEnumerable<FiapWebAPI.Models.Medico>
+
+@{
+    ViewData["Title"] = "Médicos Responsáveis";
+}
+
+<h1>Médicos Responsáveis</h1>
+
+<p>
+    <a asp-action="Create">Adicionar Novo</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Crm)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Crm)
+            </td>
+            <td>
+                @Html.ActionLink("Editar", "Edit", new { id = item.Crm }) |
+                @Html.ActionLink("Excluir", "Delete", new { id = item.Crm })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,38 @@
+﻿@model FiapWebAPI.Models.Remedio
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Adicionar à caixa</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div class="form-group">
+                <label asp-for="Nome" class="control-label"></label>
+                <input asp-for="Nome" class="form-control" />
+                <span asp-validation-for="Nome" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Dosagem" class="control-label">Dosagem(mg)</label>
+                <input asp-for="Dosagem" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Cor" class="control-label">Cor do medicamento(Opcional)</label>
+                <input asp-for="Cor" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Adicionar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
