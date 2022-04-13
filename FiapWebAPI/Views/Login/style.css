@@ -1,0 +1,26 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin-top: 0;
+    padding: 0;
+}
+
+.tamanho{
+    margin-left: 50%;
+    margin-top: 250px;
+}
+
+.imglogin{
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    background-size: cover;
+    margin-bottom: 20px;
+    margin-left: 15%;
+}
+
+div a{
+    text-decoration: none;
+}

@@ -7,6 +7,7 @@ namespace FiapWebAPI.Repository.Context
     {
         public FiapContext() : base("name-OracleConnectionString")
         {
+            System.Data.Entity.Database.SetInitializer(new MigrateDatabaseToLatestVersion<FiapContext, Senex.Migrations.Configuration>());
         }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
@@ -15,7 +16,6 @@ namespace FiapWebAPI.Repository.Context
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        public DbSet<Familiar> Familiar { get; set; }
         public DbSet<Idoso> Idoso { get; set; }
         public DbSet<Medico> Medico { get; set; }
         public DbSet<Posologia> Posologia { get; set; }

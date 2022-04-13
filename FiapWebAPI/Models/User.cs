@@ -21,5 +21,8 @@ namespace FiapWebAPI.Models
         [Column("NOME_USR")]
         public String Nome { get; set; }
 
+        [Column("CONTATO_USR")]
+        public int Contato { get; set; }
+
     }
 }

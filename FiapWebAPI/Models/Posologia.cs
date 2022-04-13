@@ -8,7 +8,7 @@ namespace FiapWebAPI.Models
         {
   
             [Key]
-            [Column("ID_REMEDIO")]
+            [Column("ID_POSOLOGIA")]
             [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
             public int Id { get; set; }
 
@@ -20,6 +20,16 @@ namespace FiapWebAPI.Models
 
             [Column("TP_POSOLOGIA")]
             public String Tipo { get; set; } 
+            
+            //Foreign Keys
+            [Column("T_REMEDIO_ID_REMEDIO")]
+            public int IdRemedio { get; set; }
+            
+            [Column("T_REMEDIO_ID_IDOSO")]
+            public int IdIdoso { get; set; }
+
+            [Column("T_REMEDIO_LOGIN_USR")]
+            public String LoginUsr { get; set; }
 
         }
 }
