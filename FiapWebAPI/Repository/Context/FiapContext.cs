@@ -16,7 +16,6 @@ namespace FiapWebAPI.Repository.Context
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
-        public DbSet<Familiar> Familiar { get; set; }
         public DbSet<Idoso> Idoso { get; set; }
         public DbSet<Medico> Medico { get; set; }
         public DbSet<Posologia> Posologia { get; set; }

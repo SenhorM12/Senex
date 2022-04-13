@@ -13,6 +13,13 @@ namespace FiapWebAPI.Models
         [Column("NM_MED")]
         [Required(ErrorMessage = "/n *Obrigatório*")]
         public String Nome { get; set; }
+
+        [Column("CONTATO_MED")]
+        public int Contato { get; set; }
+
+        //Foreign Keys
+        [Column("T_IDOSO_ID_IDOSO")]
+        public int IdIdoso { get; set; }
         
     }
 

@@ -21,5 +21,12 @@ namespace FiapWebAPI.Models
         [Column("COR_REMEDIO")]
         public String? Cor { get; set; }
 
+        //Foreign Keys
+        [Column("T_IDOSO_ID_IDOSO")]
+        public int IdIdoso { get; set; }
+
+        [Column("T_IDOSO_T_USR_LOGIN_USR")]
+        public String LoginUsr { get; set; } 
+
     }
 }

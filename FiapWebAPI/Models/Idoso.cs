@@ -20,5 +20,10 @@ namespace FiapWebAPI.Models
 
         [Column("ENDR_IDOSO")]
         public String Endereco { get; set; }
+
+        //Foreign Keys
+        [Column("T_IDOSO_T_USR_LOGIN_USR")]
+        public String LoginUsr { get; set; }
+
     }
 }
