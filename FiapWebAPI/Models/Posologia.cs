@@ -19,17 +19,7 @@ namespace FiapWebAPI.Models
             public int Quantidade { get; set; }
 
             [Column("TP_POSOLOGIA")]
-            public String Tipo { get; set; } 
-            
-            //Foreign Keys
-            [Column("T_REMEDIO_ID_REMEDIO")]
-            public int IdRemedio { get; set; }
-            
-            [Column("T_REMEDIO_ID_IDOSO")]
-            public int IdIdoso { get; set; }
-
-            [Column("T_REMEDIO_LOGIN_USR")]
-            public String LoginUsr { get; set; }
+            public String? Tipo { get; set; } 
 
         }
 }

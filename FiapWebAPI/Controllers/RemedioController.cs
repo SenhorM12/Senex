@@ -22,11 +22,11 @@ namespace FiapWebAPI.Controllers
         [HttpGet]
         public IActionResult Create()
         {
-            return View(new Models.Remedio());
+            return View(new Remedio());
         }
 
         [HttpPost]
-        public IActionResult Create(Models.Remedio remedio)
+        public IActionResult Create(Remedio remedio)
         {
 
             if (ModelState.IsValid)

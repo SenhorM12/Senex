@@ -6,10 +6,10 @@ namespace FiapWebAPI.Repository
 {
     public class IdosoRepository
     {
-        private readonly FiapContext context;
+        private readonly SenexContext context;
         public IdosoRepository()
         {
-            context = new FiapContext();
+            context = new SenexContext();
         }
 
 
@@ -40,7 +40,7 @@ namespace FiapWebAPI.Repository
 
         public void Delete(int Id)
         {
-            FiapContext context = new FiapContext();
+            SenexContext context = new SenexContext();
             Idoso idoso = context.Idoso.Find(Id);
             context.Entry(idoso).State = System.Data.Entity.EntityState.Deleted;
             context.SaveChanges();

@@ -6,10 +6,10 @@ namespace FiapWebAPI.Repository
 {
     public class MedicoRepository
     {
-        private readonly FiapContext context;
+        private readonly SenexContext context;
         public MedicoRepository()
         {
-            context = new FiapContext();
+            context = new SenexContext();
         }
 
 
@@ -40,7 +40,7 @@ namespace FiapWebAPI.Repository
 
         public void Delete(int Id)
         {
-            FiapContext context = new FiapContext();
+            SenexContext context = new SenexContext();
             Medico medico = context.Medico.Find(Id);
             context.Entry(medico).State = System.Data.Entity.EntityState.Deleted;
             context.SaveChanges();
