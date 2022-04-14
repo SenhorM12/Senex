@@ -15,7 +15,7 @@ namespace FiapWebAPI.Models
         public String Nome { get; set; }
 
         [Column("CONTATO_MED")]
-        public int Contato { get; set; }
+        public int? Contato { get; set; }
         
     }
 

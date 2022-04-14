@@ -13,13 +13,13 @@ namespace FiapWebAPI.Models
             public int Id { get; set; }
 
             [Column("HR_POSOLOGIA")]
-            public DateTime Hora { get; set; }
+            public TimeOnly Hora { get; set; }
 
             [Column("QUANT_POSOLOGIA")]
             public int Quantidade { get; set; }
 
             [Column("TP_POSOLOGIA")]
-            public String Tipo { get; set; } 
+            public String? Tipo { get; set; } 
 
         }
 }
