@@ -16,14 +16,10 @@ namespace FiapWebAPI.Models
         public String Nome { get; set; }
 
         [Column("DT_NASC_IDOSO")]
-        public DateOnly Dt_nasc { get; set; }
+        public DateTime Dt_nasc { get; set; }
 
         [Column("ENDR_IDOSO")]
         public String Endereco { get; set; }
-
-        //Foreign Keys
-        [Column("T_IDOSO_T_USR_LOGIN_USR")]
-        public String LoginUsr { get; set; }
 
     }
 }

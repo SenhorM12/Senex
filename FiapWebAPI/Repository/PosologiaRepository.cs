@@ -6,10 +6,10 @@ namespace FiapWebAPI.Repository
 {
     public class PosologiaRepository
     {
-        private readonly FiapContext context;
+        private readonly SenexContext context;
         public PosologiaRepository()
         {
-            context = new FiapContext();
+            context = new SenexContext();
         }
 
  
@@ -39,7 +39,7 @@ namespace FiapWebAPI.Repository
 
         public void Delete(int Id)
         {
-            FiapContext context = new FiapContext();
+            SenexContext context = new SenexContext();
             Posologia posologia = context.Posologia.Find(Id);
             context.Entry(posologia).State = System.Data.Entity.EntityState.Deleted;
             context.SaveChanges();

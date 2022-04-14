@@ -16,10 +16,6 @@ namespace FiapWebAPI.Models
 
         [Column("CONTATO_MED")]
         public int Contato { get; set; }
-
-        //Foreign Keys
-        [Column("T_IDOSO_ID_IDOSO")]
-        public int IdIdoso { get; set; }
         
     }
 
