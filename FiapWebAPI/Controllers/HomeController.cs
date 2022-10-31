@@ -1,8 +1,8 @@
-﻿using FiapWebAPI.Models;
+﻿using Senex.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
-namespace FiapWebAPI.Controllers
+namespace Senex.Controllers
 {
     public class HomeController : Controller
     {

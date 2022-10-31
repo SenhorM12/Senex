@@ -1,24 +1,24 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FiapWebAPI.Models
+namespace Senex.Models
 {
-    [Table("T_IDOSO")]
+    [Table("T_PROTEGIDO")]
     public class Idoso
     {
         [Key]
-        [Column("CPF_IDOSO")]
+        [Column("ID_PROTEGIDO")]
         [Required(ErrorMessage = "/n *Obrigatório*")]
         public int Cpf { get; set; }
 
-        [Column("NM_IDOSO")]
+        [Column("NM_PROTEGIDO")]
         [Required(ErrorMessage = "/n *Obrigatório*")]
-        public String Nome { get; set; }
+        public string Nome { get; set; }
 
-        [Column("ENDR_IDOSO")]
-        public String Endereco { get; set; }
+        [Column("ENDR_PROTEGIDO")]
+        public string Endereco { get; set; }
 
-        [Column("DT_NASC_IDOSO")]
-        public String? Dt_nasc { get; set; }
+        [Column("DT_NASC_PROTEGIDO")]
+        public string? Dt_nasc { get; set; }
     }
 }

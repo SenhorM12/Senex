@@ -1,28 +1,28 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FiapWebAPI.Models
+namespace Senex.Models
 {
-    [Table("T_USR")]
+    [Table("T_USER")]
     public class User
     {
         [Key]
         [Required(ErrorMessage = "/n *Obrigatório*")]
         [Column("LOGIN_USR")]
-        public String Login { get; set; }
+        public string Login { get; set; }
 
         [Required(ErrorMessage = "/n *Obrigatório*")]
         [Column("SENHA_USR")]
-        public String Password { get; set; }
+        public string Password { get; set; }
 
         [Column("EMAIL_USR")]
-        public String Email { get; set; }
+        public string Email { get; set; }
 
         [Column("NOME_USR")]
-        public String Nome { get; set; }
+        public string Nome { get; set; }
 
-        [Column("CONTATO_USR")]
-        public int Contato { get; set; }
+        [Column("TELEFONE_USR")]
+        public int Telefone { get; set; }
 
     }
 }

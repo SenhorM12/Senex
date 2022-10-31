@@ -1,8 +1,8 @@
-﻿using FiapWebAPI.Models;
-using FiapWebAPI.Repository.Context;
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
+using Senex.Models;
+using Senex.Repository.Context;
 
-namespace FiapWebAPI.Repository
+namespace Senex.Repository
 {
     public class IdosoRepository
     {
@@ -32,7 +32,7 @@ namespace FiapWebAPI.Repository
 
         public void Edit(Idoso idoso)
         {
-        
+
             context.Entry(idoso).State = System.Data.Entity.EntityState.Modified;
             context.SaveChanges();
 

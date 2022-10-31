@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using FiapWebAPI.Models;
-using FiapWebAPI.Repository;
+using Senex.Repository;
+using Senex.Models;
 
-namespace FiapWebAPI.Controllers
+namespace Senex.Controllers
 {
     public class RemedioController : Controller
     {
@@ -48,7 +48,7 @@ namespace FiapWebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult Edit(Models.Remedio remedio)
+        public IActionResult Edit(Remedio remedio)
         {
             if (ModelState.IsValid)
             {

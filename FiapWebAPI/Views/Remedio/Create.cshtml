@@ -1,4 +1,4 @@
-﻿@model FiapWebAPI.Models.Remedio
+﻿@model Senex.Models.Remedio
 
 @{
     ViewData["Title"] = "Create";
@@ -20,6 +20,10 @@
             </div>
             <div class="form-group">
                 <label asp-for="Cor" class="control-label">Cor do medicamento(Opcional)</label>
+                <input asp-for="Cor" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Cor" class="control-label">Quantidade diária</label>
                 <input asp-for="Cor" class="form-control" />
             </div>
             <div class="form-group">

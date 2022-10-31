@@ -1,9 +1,9 @@
-﻿using FiapWebAPI.Models;
+﻿using Senex.Models;
 using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
-namespace FiapWebAPI.Repository.Context
+namespace Senex.Repository.Context
 {
-    public class SenexContext : System.Data.Entity.DbContext
+    public class SenexContext : DbContext
     {
         public SenexContext() : base("name-OracleConnectionString")
         {
@@ -16,8 +16,6 @@ namespace FiapWebAPI.Repository.Context
         }
 
         public DbSet<Idoso> Idoso { get; set; }
-        public DbSet<Medico> Medico { get; set; }
-        public DbSet<Posologia> Posologia { get; set; }
         public DbSet<Remedio> Remedio { get; set; }
         public DbSet<User> User { get; set; }
 
