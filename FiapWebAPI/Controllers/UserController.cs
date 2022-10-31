@@ -1,8 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using FiapWebAPI.Models;
-using FiapWebAPI.Repository;
+using Senex.Models;
+using Senex.Repository;
 
-namespace FiapWebAPI.Controllers
+namespace Senex.Controllers
 {
     public class UserController : Controller
     {

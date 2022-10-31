@@ -1,4 +1,4 @@
-namespace FiapWebAPI.Models
+namespace Senex.Models
 {
     public class ErrorViewModel
     {

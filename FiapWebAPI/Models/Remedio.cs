@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
-namespace FiapWebAPI.Models
+namespace Senex.Models
 {
     [Table("T_REMEDIO")]
     public class Remedio
@@ -13,13 +13,16 @@ namespace FiapWebAPI.Models
 
         [Required(ErrorMessage = "/n *Obrigatório*")]
         [Column("NM_REMEDIO")]
-        public String Nome { get; set; }
+        public string? Nome { get; set; }
 
         [Column("DOSG_REMEDIO")]
-        public Double? Dosagem { get; set; }
+        public double? Dosagem { get; set; }
 
         [Column("COR_REMEDIO")]
-        public String? Cor { get; set; }
+        public string? Cor { get; set; }
+
+        [Column("QNT_DIARIA")]
+        public string? QntDiaria { get; set; }
 
     }
 }
