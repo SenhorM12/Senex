@@ -11,7 +11,7 @@ namespace Senex.Repository.Context
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.HasDefaultSchema("PF0954");
+            modelBuilder.HasDefaultSchema("RM86579");
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
         }
 
